@@ -1,0 +1,316 @@
+    1  ssh patarajarina@hpc.arizona.edu
+    2  3
+    3  955910079
+    4  188146308
+    5  955910079
+    6  961222188
+    7  ssh patarajarina@hpc.arizona.edu
+    8  cd/rsgrps/bh_class
+    9  ssh patarajarina@email.arizona.edu
+   10  ssh patarajarina@hpc.arizona.edu
+   11  cd/rsgrps/bh_class
+   12  hpc.arizona.edu
+   13  ssh patarajarina@hpc.arizona.edu
+   14  cd /rsgrps/bh_class 
+   15  mkdir patarajarina
+   16  ls
+   17  cd
+   18  cd .ssh
+   19  cat id_rsa.pub
+   20  ls
+   21  id_dsa.pub
+   22  cd id_dsa.pub
+   23  cd 
+   24  id_dsa.pub
+   25  ls
+   26  cd
+   27  cd .ssh
+   28  cat id_dsa.pub
+   29  cd /rsgrps/bh_class/patarajarina
+   30  git clone git@github.com:patarajarina/biosys-analytics.git
+   31  ls
+   32  cd biosys-analytics
+   33  ls
+   34  ost hpc
+   35  ls
+   36  ~/.ssh/config
+   37  ls
+   38  D
+   39  ls
+   40  ls /
+   41  pwd
+   42  d etc
+   43  cd home
+   44  pwd
+   45  ls
+   46  cd ondemand
+   47  ls
+   48  cd data
+   49  ls
+   50  cd /
+   51  ls
+   52  ls -l
+   53  ls -R
+   54  ls -l -t -r
+   55  ls lh
+   56  ls -lh
+   57  man ls
+   58  echo "call me"
+   59  echo $PATH
+   60  hostname
+   61  ls
+   62  whoami
+   63  w
+   64  man
+   65  man ls
+   66  ls -l
+   67  ls
+   68  echo hello
+   69  echo hello world
+   70  cowsay hello
+   71  env
+   72  echo $user
+   73  echo user
+   74  type ssh 
+   75  which ssh
+   76  pwd
+   77  touch food
+   78  ls food
+   79  ls -l
+   80  ls -lh
+   81  rm food
+   82  ls -lh
+   83  man find
+   84  find --help
+   85  cd /
+   86  touch food
+   87  ls -l
+   88  cd 
+   89  top
+   90  ps -fu user
+   91  ps -fu $USER
+   92  w
+   93  w > who
+   94  ls - lh who
+   95  ls -lh who
+   96  tree
+   97  echo $PATH
+   98  PATH=/rsgrp/bh_class/bin$PATH
+   99  which python
+  100  ssh patarajarina@hpc.arizona.edu
+  101  echo $PATH
+  102  PATH/foo:$PATH
+  103  ls
+  104  ls -a
+  105  ssh patarajarina@hpc.arizona.edu
+  106  cd /rsgrps/bh_class/patarajarina/biosys-analytics
+  107  git remote add upstream https://github.com/hurwitzlab/biosys-analytics.git
+  108  git pull upstream master
+  109  ls
+  110  cd ..
+  111  ls
+  112  biosys-analytics
+  113  cd biosys-analytics
+  114  ls
+  115  cd assignments
+  116  ls
+  117  cd 01-unix
+  118  ls
+  119  cd ..
+  120  cd ../../..
+  121  ls
+  122  cd patarajarina
+  123  cd biosys-analytics
+  124  git push
+  125  ls
+  126  git --version
+  127  git pull upstream master
+  128  cd home
+  129  cd ~
+  130  ls
+  131  cd ondemand
+  132  ls
+  133  cd data
+  134  ls
+  135  cd sys
+  136  ls
+  137  cd dashboard
+  138  ls
+  139  cd ../../../..
+  140  ls
+  141  cd /rsgrps/bh_class
+  142  ls
+  143  cd patarajarina
+  144  ls
+  145  cd biosys-analytics
+  146  ls
+  147  cd assignments
+  148  ls
+  149  cd 01-unix
+  150  ls
+  151  pwd
+  152  ls
+  153  cd ondemand
+  154  ls
+  155  cd ..
+  156  ssh patarajarina@hpc.arizona.edu
+  157  echo "export PATH=/rsgrps/bh_class/conda/bin:/rsgrps/bh_class/bin:$PATH" >> ~/.bashrc
+  158  ls
+  159  cd /rsgrps/bh_class/patarajarina/biosys-analytics
+  160  ls
+  161  cd assignments
+  162  ls
+  163  cd 01-unix
+  164  ls
+  165  mkdir files
+  166  wget https://www.constitution.org/usdeclar.txt
+  167  wget https//www.usconstitution.net/const.txt
+  168  wget https://www.usconstitution.net/const.txt
+  169  ls
+  170  mv const.txt files
+  171  mv usdeclar.txt files
+  172  cd files
+  173  ls
+  174  man nano
+  175  nano answers
+  176  ls
+  177  head answers
+  178  head answers.txt
+  179  ls
+  180  wget -O scarlet.txt  https://www.gutenberg.org/files/25344/25344-0.txt
+  181  ls
+  182  ls -l
+  183  answers.txt
+  184  open "answers.txt"
+  185  start notepad "answers.txt"
+  186  nano answers.txt
+  187  ls
+  188  cd /rsgrps/bh_class
+  189  la
+  190  ls
+  191  git push
+  192  git pull upstream master 
+  193  cd hurwitzlab/bisys-analytics
+  194  ls
+  195  cd patarajarina/biosys-analytics
+  196  git pull upstream master 
+  197  ls
+  198  cd assignments
+  199  ls
+  200  cd 01-unix
+  201  ls
+  202  cd files
+  203  ls
+  204  wc -l const.txt scarlet.txt usdeclar.txt
+  205  nano answers.txt
+  206  ? find
+  207  ?find
+  208  man find
+  209  find . -type f -size -50k
+  210  find . -type f -size +50k
+  211  find -name "const.txt" -print
+  212  find -name "const.txt"
+  213  ls - "const.txt"
+  214  ls -"const.txt"
+  215  find -name "const.txt" -l
+  216  file const.txt
+  217  file const
+  218  file const.txt
+  219  notepad const.txt
+  220  man md5
+  221  md5 *.txt
+  222  md5sum *.txt
+  223  md5sum *.txt -h
+  224  md5sum *.txt -H
+  225  md5sum const.txt
+  226  df
+  227  df -h
+  228  df -k
+  229  df -kh
+  230  df -k -h
+  231  man df
+  232  df -H
+  233  df -k
+  234  df -k -h
+  235  df -h
+  236  wc -l  *.txt -w "judge"
+  237  man grep
+  238  grep judge *.txt 
+  239  grep judge *.txt c 
+  240  grep judge *.tx -c 
+  241  grep judge *.txt -c 
+  242  man grep
+  243  grep judge *.txt -c -i 
+  244  man grep
+  245  grep judge *.txt -f 
+  246  grep judge *.txt -F 
+  247  man grep
+  248  grep judge *.txt -l 
+  249  grep human *.txt -l 
+  250  wc +.txt
+  251  wc *.txt
+  252  wc *.txt -w
+  253  wc *.txt -w -i
+  254  man grep 
+  255  man wc
+  256  man grep 
+  257  grep -o -i 'scarlet' scarlet.txt | wc -l
+  258  grep -o 'scarlet' scarlet.txt | wc -l
+  259  grep -o -i 'scarlet' scarlet.txt | wc -l
+  260  nano scaret.txt
+  261  nano scarlet.txt
+  262  head scarlet.txt
+  263  head -15 *.txt >> foo.txt
+  264  nano foo.txt
+  265  head -15 scarlet.txt
+  266  rm answers.txt
+  267  ls
+  268  head -15 *.txt > foo.txt
+  269  nano foo.txt
+  270  rm foo.txt
+  271  head -15 *.txt > foo.txt
+  272  nano foo.txt
+  273  wc -l foo.txt
+  274  rm foo.txt
+  275  history > cmds
+  276  nano cmds
+  277  cd ..
+  278  ls
+  279  cd files
+  280  ls
+  281  wc -l const.txt scarlet.txt usdeclar.txt
+  282  wc -l *.txt
+  283  cd ..
+  284  ls
+  285  rm files
+  286  cd files
+  287  ls
+  288  rm *.txt
+  289  ls
+  290  rm cmds
+  291  cd ..
+  292  ls
+  293  rmdir files
+  294  ls
+  295  mkdir files
+  296  cd files 
+  297  wget https://www.constitution.org/usdeclar.txt
+  298  wget https://www.usconstitution.net/const.txt
+  299  wget -O scarlet.txt https://www.gutenberg.org/files/25344/25344-0.txt
+  300  ls -l
+  301  wc -l *.txt
+  302  find . -type f -size +50k
+  303  ls
+  304  find . -type f -size -50k
+  305  find . -type f -size +50k
+  306  file const.txt
+  307  md5sum *.txt
+  308  df -k -h
+  309  grep judge *.txt -c -i
+  310  grep human *.txt -l
+  311  grep -o -i 'scarlet' scarlet.txt | wc -l
+  312  head -15 *.txt >> foo.txt
+  313  wc -l foo.txt
+  314  nano foo.txt
+  315  rm foo.txt
+  316  history > cmds
