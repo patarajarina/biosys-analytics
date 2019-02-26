@@ -79,10 +79,11 @@ def main():
                 out={}
                 with open('{}/{}'.format(dirname,eachfile)) as temp:
                     out[temp.readline().strip()]=temp
-                
-            for thelines in sorted(out.keys()):
-                
-                print('{} {} {}'.format(thelines, ['.' for j in width-len(thelines)+1],out.items()))  
+            thelines={}
+            for thelines in out.items():
+                aline = thelines[0]
+                afile = thelines[1]
+                print('{} {} {}'.format(aline, ['.' for j in width-len(aline)+1],afile))  
                                 
 
 #    print('str_arg = "{}"'.format(str_arg))
