@@ -83,6 +83,8 @@ def main():
 
     out_fh = open(out_arg, "w") if out_arg else sys.stdout
 
+    inorder = ['seq_id', 'pident', 'genus', 'species']
+    out_fh.write('\t'.join(inorder) + '\n')
     with open(pos_arg) as csvfile:
         fieldnames = [
             'qaccver', 'saccver', 'pident', 'length', 'mismatch', 'gapopen',
@@ -99,22 +101,8 @@ def main():
             genus = Alldata[seq_id]['genus'] or 'NA'
             species = Alldata[seq_id]['species'] or 'NA'
             inorder = [seq_id, pident, genus, species]
-
+            
             out_fh.write('\t'.join(inorder) + '\n')
-            #out_arg.write(seq_id, '\t', pident, '\t', genus, '\t', species, '\n')
-
-
-#die(row)
-#            inputdata[row['bfb6f5dfb4d0ef0842be8f5df6c86459']]={row['99.567']}
-#inputdata[i] = row['bfb6f5dfb4d0ef0842be8f5df6c86459']
-#print(inputdata)
-
-#    for centroid in Alldata:
-#        #print(centroid)
-#        for seq_id in inputdata:
-#            if centroid == seq_id:
-#                pident = inputdata['seq_id']
-#                genus = Alldata.get(centroid, default = NA)
 
 # --------------------------------------------------
 if __name__ == '__main__':
