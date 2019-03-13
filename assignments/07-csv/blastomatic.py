@@ -36,7 +36,7 @@ def get_args():
         help='Output file',
         metavar='FILE',
         type=str,
-        default=sys.stdout)
+        default='')
 
     #parser.add_argument(
     #    '-f', '--flag', help='A boolean flag', action='store_true')
@@ -63,7 +63,6 @@ def main():
 
     args = get_args()
     pos_arg = args.positional
-
     ann_arg = args.annotations
     out_arg = args.outfile
 
@@ -72,7 +71,6 @@ def main():
     if not os.path.isfile(pos_arg):
         die('"{}" is not a file'.format(pos_arg))
 
-
     Alldata = {}
 
     with open(ann_arg) as csvfile:
@@ -80,36 +78,37 @@ def main():
         for row in reader:
             Alldata[row['centroid']] = row
 #            Alldata[i] = {row['centroid']:{row['genus'],row['species']}}
-            
-
 
     inputdata = {}
+
+    out_fh = open(out_arg, "w") if out_arg else sys.stdout
+
     with open(pos_arg) as csvfile:
-        fieldnames = ['qaccver', 'saccver', 'pident', 'length', 'mismatch', 'gapopen', 'qstart', 'qend', 'sstart', 'send', 'evalue', 'bitscore']
-        reader = csv.DictReader(csvfile, delimiter='\t',fieldnames=fieldnames)
+        fieldnames = [
+            'qaccver', 'saccver', 'pident', 'length', 'mismatch', 'gapopen',
+            'qstart', 'qend', 'sstart', 'send', 'evalue', 'bitscore'
+        ]
+        reader = csv.DictReader(csvfile, delimiter='\t', fieldnames=fieldnames)
         for row in reader:
             seq_id = row['saccver']
             if seq_id not in Alldata:
                 warn('cannot find "{}" in lookup'.format(seq_id))
                 continue
-           
+
             pident = row['pident']
             genus = Alldata[seq_id]['genus'] or 'NA'
             species = Alldata[seq_id]['species'] or 'NA'
             inorder = [seq_id, pident, genus, species]
 
-            with open(out_arg, "w") as fh:
-                fh.write('\t'.join(inorder) +'\n')   
+            out_fh.write('\t'.join(inorder) + '\n')
             #out_arg.write(seq_id, '\t', pident, '\t', genus, '\t', species, '\n')
-            
-               
 
-                
+
 #die(row)
 #            inputdata[row['bfb6f5dfb4d0ef0842be8f5df6c86459']]={row['99.567']}
-            #inputdata[i] = row['bfb6f5dfb4d0ef0842be8f5df6c86459']
-            #print(inputdata)
-            
+#inputdata[i] = row['bfb6f5dfb4d0ef0842be8f5df6c86459']
+#print(inputdata)
+
 #    for centroid in Alldata:
 #        #print(centroid)
 #        for seq_id in inputdata:
@@ -117,10 +116,6 @@ def main():
 #                pident = inputdata['seq_id']
 #                genus = Alldata.get(centroid, default = NA)
 
-                
-                
-            
-     
 # --------------------------------------------------
 if __name__ == '__main__':
     main()
