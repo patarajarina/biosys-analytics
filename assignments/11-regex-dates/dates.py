@@ -35,9 +35,9 @@ def main():
         '(?P<day>\d{2})')
     date_re2 = re.compile('(?P<year>\d{4})'
         '[/, -]' # for diff case
-        '(?P<month>\d{2})'
+        '(?P<month>\d{1,2})'
         '[/, -]'
-        '(?P<day>\d{2})'
+        '(?P<day>\d{1,2})'
         '($|\D)')
 #        '[/ TZ-]')
         
