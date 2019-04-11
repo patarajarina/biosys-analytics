@@ -67,29 +67,41 @@ def main():
     DIRS = args.positional
 #    flag_arg = args.flag
     width = args.width
-    
+
+#    if not os.path.isdir(DIRS):
+#        print('"{}" is not a directory'.format(dirname), file=sys.stderr)        
 #    print(DIRS)
 #    dirname = args[0] #check
     for dirname in DIRS:
+        if not dirname[-1:] == '/':
+            dirname = dirname + '/'
         if not os.path.isdir(dirname):
+            if dirname[-1:] == '/':
+                dirname = dirname[:-1] 
             print('"{}" is not a directory'.format(dirname), file=sys.stderr)
         else:
-    
+            #if len(DIRS)>1:
+            print(dirname[:-1])
+#            for tup in dirname.items():
+#                print(tup)    
+            out = {}
             for eachfile in os.listdir(dirname):
-                out={}
-                with open('{}/{}'.format(dirname,eachfile)) as temp:
-                    out[temp.readline().strip()]=temp
-            
-            for thelines in out.items():
-                aline = thelines[0]
-                afile = thelines[1]
-                print('{} {} {}'.format(aline, [ '.' for j in range(1,int(width)-int(len(aline))+1)],afile))  
+                #print(eachfile)
+                f = open(dirname + eachfile, "r")
+                firstline = f.readline()
+                firstline=firstline.strip()
                                 
+                out[firstline]=eachfile
+            #print(out)        
+            for keyline, valfile in sorted(out.items()):
+                leftlen = width - len(keyline) - len(valfile)
+                dots ='.'
+                
+                for i in range(1,leftlen):
+                    dots = dots+'.'
+                #print(len(dots+keyline+valfile))
+                print('{} {} {}'.format(keyline, dots,valfile))
 
-#    print('str_arg = "{}"'.format(str_arg))
-#    print('int_arg = "{}"'.format(int_arg))
-#    print('flag_arg = "{}"'.format(flag_arg))
-#    print('positional = "{}"'.format(pos_arg))
 
 
 # --------------------------------------------------
